@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class AVKPlacholderTextView;
+
 @interface PTAUploadImageViewController : UIViewController
 <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *btnSelectPicture;
 @property (weak, nonatomic) IBOutlet UIImageView *ivPreview;
-@property (weak, nonatomic) IBOutlet UITextView *tvComment;
+@property (weak, nonatomic) IBOutlet AVKPlacholderTextView *tvComment;
 
 - (IBAction)btnSelectPicturePressed:(UIButton *)sender;
 - (IBAction)btnSendPressed:(UIBarButtonItem *)sender;

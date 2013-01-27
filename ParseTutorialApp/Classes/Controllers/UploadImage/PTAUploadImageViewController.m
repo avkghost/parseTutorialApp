@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 AVKSoftware. All rights reserved.
 //
 
-#import "PTAUploadImageViewController.h"
 #import <Parse/Parse.h>
+#import "PTAUploadImageViewController.h"
+#import "AVKPlacholderTextView.h"
 
 @interface PTAUploadImageViewController ()
 
@@ -19,6 +20,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.tvComment.placeholder = @"Comment";
 }
 
 - (void)viewWillAppear:(BOOL)animated

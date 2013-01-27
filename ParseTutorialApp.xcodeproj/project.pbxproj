@@ -39,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A7F19EA16B591CB009C493E /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		8A7F19ED16B59231009C493E /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		8A852B5216B5235900383234 /* ParseTutorialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTutorialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A852B5616B5235900383234 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A852B5816B5235900383234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A7F19EC16B59231009C493E /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F19ED16B59231009C493E /* Logging.h */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		8A852B4716B5235800383234 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 				8A852B6816B5235900383234 /* Default.png */,
 				8A852B6A16B5235900383234 /* Default@2x.png */,
 				8A852B6C16B5235900383234 /* Default-568h@2x.png */,
+				8A7F19EA16B591CB009C493E /* config.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 		8A852B8516B5292600383234 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				8A7F19EC16B59231009C493E /* Logging */,
 				8A852B9F16B546AE00383234 /* Parse.framework */,
 			);
 			path = Libraries;

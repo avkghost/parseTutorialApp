@@ -10,10 +10,14 @@
 
 @interface AVKPlacholderTextView : UITextView
 {
-    BOOL _shouldDrawPlaceholder;
+@private
+    BOOL _drawPlaceholder;
+    NSArray *_observingProperties;
 }
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;
+
+- (void)initialize;
 
 @end
