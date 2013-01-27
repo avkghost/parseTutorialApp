@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 AVKSoftware. All rights reserved.
 //
 
-#import "AVKAppDelegate.h"
+#import "PTAAppDelegate.h"
 
-@implementation AVKAppDelegate
+@implementation PTAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

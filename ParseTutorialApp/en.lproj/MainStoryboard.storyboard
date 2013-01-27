@@ -1,26 +1,283 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oV6-y6-VE8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Sign In View Controller - Sign In-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="AVKViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="PTASignInViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJK-fA-dQj">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1W-2O-qHr">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ka7-bC-dcR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p5U-bz-Jct" kind="push" id="uyD-iQ-yke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMZ-zh-0uO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9L1-il-zaJ" kind="push" id="UcQ-6b-xRn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New user?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-eI-r4l">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y1W-2O-qHr" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8WI-zy-iPF"/>
+                            <constraint firstItem="aJK-fA-dQj" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8aA-zG-XhA"/>
+                            <constraint firstItem="VMZ-zh-0uO" firstAttribute="top" secondItem="ka7-bC-dcR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8xh-7b-7gk"/>
+                            <constraint firstAttribute="trailing" secondItem="VMZ-zh-0uO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9ys-L2-R1w"/>
+                            <constraint firstAttribute="trailing" secondItem="y1W-2O-qHr" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rq0-1a-cUz"/>
+                            <constraint firstItem="ka7-bC-dcR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="U41-cG-Jhw"/>
+                            <constraint firstItem="dH5-eI-r4l" firstAttribute="centerX" secondItem="ka7-bC-dcR" secondAttribute="centerX" type="default" id="VcO-YY-Hnf"/>
+                            <constraint firstItem="dH5-eI-r4l" firstAttribute="centerY" secondItem="VMZ-zh-0uO" secondAttribute="centerY" type="default" id="XJP-bi-Tva"/>
+                            <constraint firstItem="aJK-fA-dQj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="aKO-4V-imE"/>
+                            <constraint firstItem="y1W-2O-qHr" firstAttribute="top" secondItem="aJK-fA-dQj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cPf-pW-W8d"/>
+                            <constraint firstItem="ka7-bC-dcR" firstAttribute="top" secondItem="y1W-2O-qHr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="q5h-uw-cJE"/>
+                            <constraint firstAttribute="trailing" secondItem="ka7-bC-dcR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="twS-mC-lHg"/>
+                            <constraint firstAttribute="trailing" secondItem="aJK-fA-dQj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="yg4-G8-h4K"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="f78-gF-CS0"/>
+                    <connections>
+                        <outlet property="btnSignIn" destination="ka7-bC-dcR" id="pbU-2m-MCR"/>
+                        <outlet property="btnSignUp" destination="VMZ-zh-0uO" id="0rI-21-qqh"/>
+                        <outlet property="tfPassword" destination="y1W-2O-qHr" id="Jk7-gn-RPp"/>
+                        <outlet property="tfUserName" destination="aJK-fA-dQj" id="g90-8v-P7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="498" y="20"/>
+        </scene>
+        <!--Wall Picture View Controller - Wall-->
+        <scene sceneID="sTM-Bh-TwU">
+            <objects>
+                <viewController id="p5U-bz-Jct" customClass="PTAWallPictureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sf4-1h-Q4g">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNn-Uy-kJR"/>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CNn-Uy-kJR" firstAttribute="top" secondItem="Sf4-1h-Q4g" secondAttribute="top" type="default" id="7zz-mI-sqc"/>
+                            <constraint firstItem="CNn-Uy-kJR" firstAttribute="leading" secondItem="Sf4-1h-Q4g" secondAttribute="leading" type="default" id="G8T-MS-KE3"/>
+                            <constraint firstItem="CNn-Uy-kJR" firstAttribute="bottom" secondItem="Sf4-1h-Q4g" secondAttribute="bottom" type="default" id="Rep-9b-K1f"/>
+                            <constraint firstItem="CNn-Uy-kJR" firstAttribute="trailing" secondItem="Sf4-1h-Q4g" secondAttribute="trailing" type="default" id="zWS-ui-5a6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wall" id="SlH-ti-lSD">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="IRO-HI-HcA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Upload" id="8CG-qq-kIB">
+                            <connections>
+                                <segue destination="4T4-Xt-40l" kind="push" id="neO-5E-1sU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wki-r8-opM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="20"/>
+        </scene>
+        <!--Upload Image View Controller - Upload-->
+        <scene sceneID="mZD-Ee-joG">
+            <objects>
+                <viewController id="4T4-Xt-40l" customClass="PTAUploadImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Bu-RK-JnX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgf-G9-5sg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="qHZ-Np-Sxf"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhW-C7-6kA">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QsB-O7-zWj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gu-6L-rfU">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Select Picture">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSelectPicturePressed:" destination="4T4-Xt-40l" eventType="touchUpInside" id="6wq-aA-gGV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mgf-G9-5sg" firstAttribute="leading" secondItem="5Bu-RK-JnX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1jr-dX-BVn"/>
+                            <constraint firstAttribute="trailing" secondItem="mgf-G9-5sg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6ZI-ee-mVU"/>
+                            <constraint firstItem="1gu-6L-rfU" firstAttribute="top" secondItem="mgf-G9-5sg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HWJ-8l-btj"/>
+                            <constraint firstAttribute="trailing" secondItem="1gu-6L-rfU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NB0-O1-HKx"/>
+                            <constraint firstAttribute="trailing" secondItem="uhW-C7-6kA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="O0H-gO-AyJ"/>
+                            <constraint firstItem="uhW-C7-6kA" firstAttribute="top" secondItem="5Bu-RK-JnX" secondAttribute="top" constant="20" symbolic="YES" type="default" id="WUH-rA-ojm"/>
+                            <constraint firstItem="mgf-G9-5sg" firstAttribute="top" secondItem="uhW-C7-6kA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="b7N-ys-5F4"/>
+                            <constraint firstItem="1gu-6L-rfU" firstAttribute="leading" secondItem="5Bu-RK-JnX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cMR-r8-X79"/>
+                            <constraint firstItem="uhW-C7-6kA" firstAttribute="leading" secondItem="5Bu-RK-JnX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="tGo-pL-JyL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upload" id="Qui-yS-CeR">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="akL-kU-csb">
+                            <connections>
+                                <action selector="btnSendPressed:" destination="4T4-Xt-40l" id="hw0-k3-fbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnSelectPicture" destination="1gu-6L-rfU" id="eGk-Pa-fwh"/>
+                        <outlet property="ivPreview" destination="mgf-G9-5sg" id="3q4-85-KDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umy-L7-iZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="20"/>
+        </scene>
+        <!--Sign Up View Controller - Sign Up-->
+        <scene sceneID="b3K-Qg-wgi">
+            <objects>
+                <viewController id="9L1-il-zaJ" customClass="PTASignUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4kE-BY-JZX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmK-Th-Ubj">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDt-pi-7WY">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKd-OP-yc2">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p5U-bz-Jct" kind="push" id="sxp-y6-kIt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDt-pi-7WY" firstAttribute="top" secondItem="EmK-Th-Ubj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5aY-j6-gvf"/>
+                            <constraint firstItem="EmK-Th-Ubj" firstAttribute="top" secondItem="4kE-BY-JZX" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6lo-gx-adh"/>
+                            <constraint firstAttribute="trailing" secondItem="bDt-pi-7WY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ae6-mw-bCH"/>
+                            <constraint firstItem="PKd-OP-yc2" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CBG-WK-gLg"/>
+                            <constraint firstAttribute="trailing" secondItem="EmK-Th-Ubj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="an5-Cj-nnx"/>
+                            <constraint firstItem="bDt-pi-7WY" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hTa-MA-fiz"/>
+                            <constraint firstAttribute="trailing" secondItem="PKd-OP-yc2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xGu-M6-clf"/>
+                            <constraint firstItem="EmK-Th-Ubj" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xPV-SW-NHs"/>
+                            <constraint firstItem="PKd-OP-yc2" firstAttribute="top" secondItem="4kE-BY-JZX" secondAttribute="top" constant="97" id="yW6-I9-uAB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="Mmg-cm-5XA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMQ-85-R7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Kx-le-hIk">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="oV6-y6-VE8" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="a3o-ds-RXF">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="zzH-lv-Ael"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgM-GO-mbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="20"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PTASignInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PTASignInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="btnSignIn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnSignUp" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tfPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tfUserName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="PTASignUpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PTASignUpViewController.h"/>
+        </class>
+        <class className="PTAUploadImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PTAUploadImageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnSelectPicturePressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="btnSendPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="btnSelectPicture" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="ivPreview" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="PTAWallPictureViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PTAWallPictureViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="sxp-y6-kIt"/>
+    </inferredMetricsTieBreakers>
 </document>

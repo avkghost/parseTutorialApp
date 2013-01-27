@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AVKAppDelegate.h"
+#import "PTAAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AVKAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([PTAAppDelegate class]));
     }
 }

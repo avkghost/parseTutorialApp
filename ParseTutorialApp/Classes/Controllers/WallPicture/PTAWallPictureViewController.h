@@ -1,5 +1,5 @@
 //
-//  AVKViewController.h
+//  PTAWallPictureViewController.h
 //  ParseTutorialApp
 //
 //  Created by Andrey Kozeletsky on 1/27/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVKViewController : UIViewController
+@interface PTAWallPictureViewController : UIViewController
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 AVKSoftware. All rights reserved.
 //
 
-#import "AVKViewController.h"
+#import "PTASignInViewController.h"
 
-@interface AVKViewController ()
+@interface PTASignInViewController ()
 
 @end
 
-@implementation AVKViewController
+@implementation PTASignInViewController
 
 - (void)viewDidLoad
 {
@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setBtnSignIn:nil];
+    [self setBtnSignUp:nil];
+    [super viewDidUnload];
+}
 @end

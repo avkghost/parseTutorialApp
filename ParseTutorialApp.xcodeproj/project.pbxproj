@@ -12,12 +12,15 @@
 		8A852B5B16B5235900383234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A852B5A16B5235900383234 /* CoreGraphics.framework */; };
 		8A852B6116B5235900383234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A852B5F16B5235900383234 /* InfoPlist.strings */; };
 		8A852B6316B5235900383234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B6216B5235900383234 /* main.m */; };
-		8A852B6716B5235900383234 /* AVKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B6616B5235900383234 /* AVKAppDelegate.m */; };
 		8A852B6916B5235900383234 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A852B6816B5235900383234 /* Default.png */; };
 		8A852B6B16B5235900383234 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A852B6A16B5235900383234 /* Default@2x.png */; };
 		8A852B6D16B5235900383234 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A852B6C16B5235900383234 /* Default-568h@2x.png */; };
 		8A852B7016B5235900383234 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A852B6E16B5235900383234 /* MainStoryboard.storyboard */; };
-		8A852B7316B5235900383234 /* AVKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B7216B5235900383234 /* AVKViewController.m */; };
+		8A852B8316B528E600383234 /* PTASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B7D16B528E600383234 /* PTASignInViewController.m */; };
+		8A852B8416B528E600383234 /* PTAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B8216B528E600383234 /* PTAAppDelegate.m */; };
+		8A852B8E16B52CFA00383234 /* PTASignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B8D16B52CFA00383234 /* PTASignUpViewController.m */; };
+		8A852B9216B52E5700383234 /* PTAWallPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B9116B52E5700383234 /* PTAWallPictureViewController.m */; };
+		8A852B9916B535FB00383234 /* PTAUploadImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A852B9816B535FB00383234 /* PTAUploadImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +32,20 @@
 		8A852B6016B5235900383234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A852B6216B5235900383234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A852B6416B5235900383234 /* ParseTutorialApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseTutorialApp-Prefix.pch"; sourceTree = "<group>"; };
-		8A852B6516B5235900383234 /* AVKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVKAppDelegate.h; sourceTree = "<group>"; };
-		8A852B6616B5235900383234 /* AVKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVKAppDelegate.m; sourceTree = "<group>"; };
 		8A852B6816B5235900383234 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8A852B6A16B5235900383234 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8A852B6C16B5235900383234 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8A852B6F16B5235900383234 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8A852B7116B5235900383234 /* AVKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVKViewController.h; sourceTree = "<group>"; };
-		8A852B7216B5235900383234 /* AVKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVKViewController.m; sourceTree = "<group>"; };
+		8A852B7C16B528E600383234 /* PTASignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTASignInViewController.h; sourceTree = "<group>"; };
+		8A852B7D16B528E600383234 /* PTASignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTASignInViewController.m; sourceTree = "<group>"; };
+		8A852B8116B528E600383234 /* PTAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAAppDelegate.h; sourceTree = "<group>"; };
+		8A852B8216B528E600383234 /* PTAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAAppDelegate.m; sourceTree = "<group>"; };
+		8A852B8C16B52CFA00383234 /* PTASignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTASignUpViewController.h; sourceTree = "<group>"; };
+		8A852B8D16B52CFA00383234 /* PTASignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTASignUpViewController.m; sourceTree = "<group>"; };
+		8A852B9016B52E5700383234 /* PTAWallPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAWallPictureViewController.h; sourceTree = "<group>"; };
+		8A852B9116B52E5700383234 /* PTAWallPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAWallPictureViewController.m; sourceTree = "<group>"; };
+		8A852B9716B535FB00383234 /* PTAUploadImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTAUploadImageViewController.h; sourceTree = "<group>"; };
+		8A852B9816B535FB00383234 /* PTAUploadImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTAUploadImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +92,10 @@
 		8A852B5C16B5235900383234 /* ParseTutorialApp */ = {
 			isa = PBXGroup;
 			children = (
-				8A852B6516B5235900383234 /* AVKAppDelegate.h */,
-				8A852B6616B5235900383234 /* AVKAppDelegate.m */,
+				8A852B7916B528E600383234 /* Classes */,
+				8A852B8516B5292600383234 /* Libraries */,
+				8A852B8616B5293000383234 /* Resources */,
 				8A852B6E16B5235900383234 /* MainStoryboard.storyboard */,
-				8A852B7116B5235900383234 /* AVKViewController.h */,
-				8A852B7216B5235900383234 /* AVKViewController.m */,
 				8A852B5D16B5235900383234 /* Supporting Files */,
 			);
 			path = ParseTutorialApp;
@@ -105,6 +113,77 @@
 				8A852B6C16B5235900383234 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A852B7916B528E600383234 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B7A16B528E600383234 /* Controllers */,
+				8A852B8116B528E600383234 /* PTAAppDelegate.h */,
+				8A852B8216B528E600383234 /* PTAAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8A852B7A16B528E600383234 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B7B16B528E600383234 /* SignIn */,
+				8A852B7E16B528E600383234 /* SignUp */,
+				8A852B7F16B528E600383234 /* UploadImage */,
+				8A852B8F16B52DE600383234 /* WallPicture */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A852B7B16B528E600383234 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B7C16B528E600383234 /* PTASignInViewController.h */,
+				8A852B7D16B528E600383234 /* PTASignInViewController.m */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8A852B7E16B528E600383234 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B8C16B52CFA00383234 /* PTASignUpViewController.h */,
+				8A852B8D16B52CFA00383234 /* PTASignUpViewController.m */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8A852B7F16B528E600383234 /* UploadImage */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B9716B535FB00383234 /* PTAUploadImageViewController.h */,
+				8A852B9816B535FB00383234 /* PTAUploadImageViewController.m */,
+			);
+			path = UploadImage;
+			sourceTree = "<group>";
+		};
+		8A852B8516B5292600383234 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		8A852B8616B5293000383234 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A852B8F16B52DE600383234 /* WallPicture */ = {
+			isa = PBXGroup;
+			children = (
+				8A852B9016B52E5700383234 /* PTAWallPictureViewController.h */,
+				8A852B9116B52E5700383234 /* PTAWallPictureViewController.m */,
+			);
+			path = WallPicture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +212,7 @@
 		8A852B4916B5235800383234 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = AVK;
+				CLASSPREFIX = PTA;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = AVKSoftware;
 			};
@@ -175,8 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A852B6316B5235900383234 /* main.m in Sources */,
-				8A852B6716B5235900383234 /* AVKAppDelegate.m in Sources */,
-				8A852B7316B5235900383234 /* AVKViewController.m in Sources */,
+				8A852B8316B528E600383234 /* PTASignInViewController.m in Sources */,
+				8A852B8416B528E600383234 /* PTAAppDelegate.m in Sources */,
+				8A852B8E16B52CFA00383234 /* PTASignUpViewController.m in Sources */,
+				8A852B9216B52E5700383234 /* PTAWallPictureViewController.m in Sources */,
+				8A852B9916B535FB00383234 /* PTAUploadImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +340,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseTutorialApp/ParseTutorialApp-Prefix.pch";
 				INFOPLIST_FILE = "ParseTutorialApp/ParseTutorialApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +352,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseTutorialApp/ParseTutorialApp-Prefix.pch";
 				INFOPLIST_FILE = "ParseTutorialApp/ParseTutorialApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +377,7 @@
 				8A852B7816B5235900383234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

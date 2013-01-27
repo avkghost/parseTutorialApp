@@ -1,5 +1,5 @@
 //
-//  AVKAppDelegate.h
+//  PTASignUpViewController.h
 //  ParseTutorialApp
 //
 //  Created by Andrey Kozeletsky on 1/27/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVKAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface PTASignUpViewController : UIViewController
 
 @end
