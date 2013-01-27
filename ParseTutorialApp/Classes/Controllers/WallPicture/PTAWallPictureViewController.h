@@ -10,4 +10,9 @@
 
 @interface PTAWallPictureViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *svWall;
+@property (nonatomic, strong) NSArray *wallObjects;
+
+- (IBAction)btnSignOutPressed:(UIBarButtonItem *)sender;
+
 @end

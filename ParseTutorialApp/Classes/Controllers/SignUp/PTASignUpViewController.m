@@ -7,21 +7,13 @@
 //
 
 #import "PTASignUpViewController.h"
+#import <Parse/Parse.h>
 
 @interface PTASignUpViewController ()
 
 @end
 
 @implementation PTASignUpViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -35,4 +27,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnSignUpPressed:(id)sender
+{
+    [self.tfUserName resignFirstResponder];
+    [self.tfPassword resignFirstResponder];
+    
+    // SignUP action
+    PFUser *user = [PFUser user];
+    
+    user.username = self.tfUserName.text;
+    user.password = self.tfPassword.text;
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (nil == error) {
+
+            [self performSegueWithIdentifier:@"SignUpSuccesful" sender:self];
+            
+        } else {
+            // Error handling
+            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                       message:errorString
+                                      delegate:nil
+                             cancelButtonTitle:@"Ok"
+                              otherButtonTitles:nil] show];
+        }
+    }];
+}
 @end

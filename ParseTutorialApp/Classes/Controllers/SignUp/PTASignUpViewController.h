@@ -10,4 +10,9 @@
 
 @interface PTASignUpViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *tfUserName;
+@property (weak, nonatomic) IBOutlet UITextField *tfPassword;
+
+
+- (IBAction)btnSignUpPressed:(id)sender;
 @end

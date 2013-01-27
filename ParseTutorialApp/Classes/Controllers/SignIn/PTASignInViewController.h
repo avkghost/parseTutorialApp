@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfUserName;
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
 
+- (IBAction)btnSignInPressed:(UIButton *)sender;
+
 @end

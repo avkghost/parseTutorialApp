@@ -7,6 +7,7 @@
 //
 
 #import "PTASignInViewController.h"
+#import <Parse/Parse.h>
 
 @interface PTASignInViewController ()
 
@@ -26,9 +27,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setBtnSignIn:nil];
-    [self setBtnSignUp:nil];
-    [super viewDidUnload];
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return (toInterfaceOrientation == UIInterfaceOrientationPortrait ||
+            toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark - Actions
+
+- (IBAction)btnSignInPressed:(UIButton *)sender
+{
+    // Sign In Action
+    [self.tfUserName resignFirstResponder];
+    [self.tfPassword resignFirstResponder];
+    
+    [PFUser logInWithUsernameInBackground:self.tfUserName.text
+                                 password:self.tfPassword.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (nil == error) {
+                                            
+                                            [self performSegueWithIdentifier:@"SignInSuccesful" sender:self];
+                                            
+                                        } else {
+                                            // Error handling
+                                            NSString *errorString = [[error userInfo] objectForKey:@"error"];
+                                            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                        message:errorString
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"Ok"
+                                                              otherButtonTitles:nil] show];
+                                        }
+                                    }];
 }
 @end

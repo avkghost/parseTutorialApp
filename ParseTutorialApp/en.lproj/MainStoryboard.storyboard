@@ -30,7 +30,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p5U-bz-Jct" kind="push" id="uyD-iQ-yke"/>
+                                    <action selector="btnSignInPressed:" destination="2" eventType="touchUpInside" id="c00-Xc-rff"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMZ-zh-0uO">
@@ -43,7 +43,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9L1-il-zaJ" kind="push" id="UcQ-6b-xRn"/>
+                                    <segue destination="9L1-il-zaJ" kind="push" id="oiy-EG-1fV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New user?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-eI-r4l">
@@ -75,6 +75,7 @@
                         <outlet property="btnSignUp" destination="VMZ-zh-0uO" id="0rI-21-qqh"/>
                         <outlet property="tfPassword" destination="y1W-2O-qHr" id="Jk7-gn-RPp"/>
                         <outlet property="tfUserName" destination="aJK-fA-dQj" id="g90-8v-P7J"/>
+                        <segue destination="p5U-bz-Jct" kind="push" identifier="SignInSuccesful" id="d1j-Ad-54A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -100,13 +101,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Wall" id="SlH-ti-lSD">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="IRO-HI-HcA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="IRO-HI-HcA">
+                            <connections>
+                                <action selector="btnSignOutPressed:" destination="p5U-bz-Jct" id="0nu-ej-GJb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Upload" id="8CG-qq-kIB">
                             <connections>
                                 <segue destination="4T4-Xt-40l" kind="push" id="neO-5E-1sU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="svWall" destination="CNn-Uy-kJR" id="02H-BV-h4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wki-r8-opM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +178,7 @@
                     <connections>
                         <outlet property="btnSelectPicture" destination="1gu-6L-rfU" id="eGk-Pa-fwh"/>
                         <outlet property="ivPreview" destination="mgf-G9-5sg" id="3q4-85-KDV"/>
+                        <outlet property="tvComment" destination="uhW-C7-6kA" id="FG8-zk-rjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umy-L7-iZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,7 +211,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="p5U-bz-Jct" kind="push" id="sxp-y6-kIt"/>
+                                    <action selector="btnSignUpPressed:" destination="9L1-il-zaJ" eventType="touchUpInside" id="zDx-8m-UAm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,13 +222,18 @@
                             <constraint firstAttribute="trailing" secondItem="bDt-pi-7WY" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ae6-mw-bCH"/>
                             <constraint firstItem="PKd-OP-yc2" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CBG-WK-gLg"/>
                             <constraint firstAttribute="trailing" secondItem="EmK-Th-Ubj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="an5-Cj-nnx"/>
+                            <constraint firstItem="PKd-OP-yc2" firstAttribute="top" secondItem="bDt-pi-7WY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="f1C-kn-Kd4"/>
                             <constraint firstItem="bDt-pi-7WY" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="hTa-MA-fiz"/>
                             <constraint firstAttribute="trailing" secondItem="PKd-OP-yc2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xGu-M6-clf"/>
                             <constraint firstItem="EmK-Th-Ubj" firstAttribute="leading" secondItem="4kE-BY-JZX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xPV-SW-NHs"/>
-                            <constraint firstItem="PKd-OP-yc2" firstAttribute="top" secondItem="4kE-BY-JZX" secondAttribute="top" constant="97" id="yW6-I9-uAB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="Mmg-cm-5XA"/>
+                    <connections>
+                        <outlet property="tfPassword" destination="bDt-pi-7WY" id="oxF-yZ-6iu"/>
+                        <outlet property="tfUserName" destination="EmK-Th-Ubj" id="RRP-C8-WkN"/>
+                        <segue destination="p5U-bz-Jct" kind="push" identifier="SignUpSuccesful" id="cV2-eI-RQl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMQ-85-R7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +264,7 @@
         <class className="PTASignInViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PTASignInViewController.h"/>
             <relationships>
+                <relationship kind="action" name="btnSignInPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnSignIn" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="btnSignUp" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="tfPassword" candidateClass="UITextField"/>
@@ -258,6 +273,11 @@
         </class>
         <class className="PTASignUpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PTASignUpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnSignUpPressed:"/>
+                <relationship kind="outlet" name="tfPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tfUserName" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="PTAUploadImageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PTAUploadImageViewController.h"/>
@@ -266,10 +286,15 @@
                 <relationship kind="action" name="btnSendPressed:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="btnSelectPicture" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="ivPreview" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tvComment" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="PTAWallPictureViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PTAWallPictureViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnSignOutPressed:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="svWall" candidateClass="UIScrollView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -278,6 +303,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sxp-y6-kIt"/>
+        <segue reference="d1j-Ad-54A"/>
     </inferredMetricsTieBreakers>
 </document>

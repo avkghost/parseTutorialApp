@@ -7,12 +7,21 @@
 //
 
 #import "PTAAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation PTAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self configureParse];
+    
+//    PFObject *player = [PFObject objectWithClassName:@"Player"];//1
+//    [player setObject:@"John" forKey:@"Name"];
+//    [player setObject:[NSNumber numberWithInt:1230] forKey:@"Score"];//2
+//    [player save];//3
+    
     return YES;
 }
 							
@@ -41,6 +50,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Private methods
+
+- (void)configureParse
+{
+    // TODO:
+    [Parse setApplicationId:@"EtYvC1QtXrOE8r5V9hM9jyZhnTpFEvwtun97hSCu"
+                  clientKey:@"LAy4ulF1MtlGyEmqf6At4hGRUFBA0cOwKDy2X4h7"];
 }
 
 @end
